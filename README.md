@@ -43,6 +43,32 @@
 
 ---
 
+### **Mounted Directories in the Docker Container**
+
+These directories are synchronized between your local machine and the Docker container, making managing and updating files easy.
+
+- **`./dags`**
+  - **Purpose**: Place your DAG files here. They will automatically be loaded into Airflow.
+  - **Path on Host**: `airflow/dags/`
+  - **Path in Container**: `/opt/airflow/dags/`
+
+- **`./logs`**
+  - **Purpose**: Contains logs from task execution and the scheduler.
+  - **Path on Host**: `airflow/logs/`
+  - **Path in Container**: `/opt/airflow/logs/`
+
+- **`./config`** (Optional)
+  - **Purpose**: Add custom configurations, such as log parsers or `airflow_local_settings.py` for cluster policies.
+  - **Path on Host**: `airflow/config/`
+  - **Path in Container**: `/opt/airflow/config/`
+
+- **`./plugins`**
+  - **Purpose**: Place your custom plugins here. Airflow will automatically pick them up.
+  - **Path on Host**: `airflow/plugins/`
+  - **Path in Container**: `/opt/airflow/plugins/`
+ 
+---
+
 ### **Clean Up (Optional)**
    - To stop and clean up all the containers, volumes, and memory, run the following command in the directory where you have the `docker-compose.yaml` file:
      ```
