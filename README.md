@@ -1,9 +1,8 @@
----
-
-### Dockerizing a Python Flask Application: A Complete Step-by-Step Example
+## Dockerizing a Python Flask Application: A Complete Step-by-Step Example
 
 This guide walks through creating a Docker image for a Python Flask application, including all necessary components like the Python script (`app.py`), `Dockerfile`, and `requirements.txt`.
-Note: 
+Note:
+
 ---
 
 #### 1. **Create a Simple Python Script (`app.py`)**
