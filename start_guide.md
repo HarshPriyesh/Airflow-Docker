@@ -1,4 +1,4 @@
-## Familiarizing Docker on Windows, here's a step-by-step guide:
+## Familiarizing Docker on Windows (step-by-step guide)
 
 ---
 
