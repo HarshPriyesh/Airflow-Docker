@@ -1,3 +1,1 @@
 # Add your required pip packages here
-google-cloud-bigquery
-google-cloud-storage
