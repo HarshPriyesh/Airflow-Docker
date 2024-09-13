@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest    # Use the latest Nginx image
+    ports:
+      - "8080:80"          # Map host port 8080 to container port 80
+    volumes:
+      - ./html:/usr/share/nginx/html  # Bind your local html folder to the container
+
+  db:
+    image: mysql:5.7       # Use MySQL version 5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Set the root password for MySQL
+    volumes:
+      - db_data:/var/lib/mysql  # Persist database data with a named volume
+
+volumes:
+  db_data:  # Declare the named volume for MySQL
