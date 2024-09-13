@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_data  # Database to store user names
+    volumes:
+      - db_data:/var/lib/mysql
+
+  flask:
+    build: ./flask-app
+    ports:
+      - "5000:5000"  # Flask runs on port 5000
+    environment:
+      - FLASK_ENV=development  # Enable debugging
+    depends_on:
+      - db
+
+volumes:
+  db_data:
